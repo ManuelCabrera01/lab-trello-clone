@@ -20,7 +20,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Mongoose configuration
-// Lesson 1: Mongoose configuration
+require ('config/dateBase');
 // Lesson 2: Use environment variable for the MONGODB_URI
 
 app.set('view engine', 'jade');
