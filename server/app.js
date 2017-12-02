@@ -5,7 +5,8 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const mongoose = require ('mongoose')
+const mongoose = require ('mongoose');
+const dotenv = require ('dotenv');
 // Lesson 2: Require dotenv configuration
 
 const app = express();
