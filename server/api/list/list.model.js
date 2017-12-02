@@ -15,10 +15,11 @@ const listSchema = new mongoose.Schema({
   },
   cards : {
     type : Array,
+    defaul:[],
     require: true
-  },
-
-     timestamps:   {
+  }
+  },{
+     timestamps:  {
        createdAt: "created_at",
        updatedAt: "updated_at"
      }
