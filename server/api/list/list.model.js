@@ -6,23 +6,30 @@ const Schema = mongoose.Schema;
 const listSchema = new mongoose.Schema({
   // Lesson 2: Implement the List Model
   title: {
-    type: String,
+    type:
+    String,
     require: true
   },
   position: {
-    tyoe :Number,
-    require: true
+    type:
+    Number,
+    require: true,
+    default: 0
   },
-  cards : {
-    type : Array,
-    defaul:[],
-    require: true
+  cards: [
+    {
+  type: Schema.Types.ObjectId,
+  'default': [],
+  require: true,
+   ref: 'Card'
+ }
+  ]
+}, {
+  timestamps:{
+    createdAt: 'created_at',
+    updatedAt:
+    'updated_at'
   }
-  },{
-     timestamps:  {
-       createdAt: "created_at",
-       updatedAt: "updated_at"
-     }
 });
 
 module.exports = mongoose.model('List', listSchema);

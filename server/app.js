@@ -8,6 +8,7 @@ const cors = require('cors');
 const mongoose = require ('mongoose');
 const dotenv = require ('dotenv');
 // Lesson 2: Require dotenv configuration
+require ('./config/dataBase');
 
 const app = express();
 
@@ -21,7 +22,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Mongoose configuration
-require ('config/dateBase');
 // Lesson 2: Use environment variable for the MONGODB_URI
 
 app.set('view engine', 'jade');

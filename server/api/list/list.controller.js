@@ -51,7 +51,7 @@ exports.editList = function(req, res, next) {
                 list.save(function(err) {
                     if (err) {
                         res.json({ message: 'impossible to update the list', error: err });
-                    };
+                    }
                     res.json({ message: 'list successfully updated', list });
                 });
             } else {
@@ -64,9 +64,9 @@ exports.removeList = function (req, res) {
     listModel
         .findByIdAndRemove(req.params.id, function(err) {
             if (err) {
-                res.json({ message: 'impossible to remove the card', error: err });
+                res.json({ message: 'impossible to remove the list', error: err });
             };
 
-            res.json({ message: 'card removed successfully' });
+            res.json({ message: 'list removed successfully' });
         });
 };
